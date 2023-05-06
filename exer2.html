@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Return first and last name from a form</title>
+</head>
+
+<body>
+    <h1>Example #2: Input a first and last name and it will return the value using JS DOM</h1>
+    <form id="form1" onsubmit="getFormvalue()">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        <input type="submit" value="Submit">
+
+
+    </form>
+    <br><br><a href="index.html">
+        <input type="button" value="Back" />
+    </a>
+    <a href="exer3.html">
+        <input type="button" value="Next" />
+    </a>
+    <script>
+        //Dango, Eric T.
+        function getFormvalue() {
+            var form = document.getElementById("form1");
+            for (var i = 0; i < form.length; i++) {
+                if (form.elements[i].value != 'Submit') {
+                    document.write(" " +
+                        form.elements[i].value);
+                    console.log(form.elements[i].value);
+                }
+            }
+            document.write(" " + "<br><a href='exer1.html'><input type='button' value='Back' /></a><a href='exer3.html'><input type='button' value='Next' /></a>");
+        }
+    </script>
+</body>
+
+</html>
